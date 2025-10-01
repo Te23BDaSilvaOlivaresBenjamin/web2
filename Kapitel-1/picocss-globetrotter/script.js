@@ -30,21 +30,32 @@ knapp.addEventListener('click', function () {
         rubrik.style.fontFamily = "serif";
     }
 });
+///////////////////////////////////////////////////
 
+// Välj formulärknappen (input)
 let fknapp = document.querySelector('input[type="submit"]');
 
+// Välj textrutorna
 let fnamn = document.querySelector('input');
+let femail = document.querySelector('input[type="email"]');
+let fmeddelande = document.querySelector('textarea');
 
-let fmail = document.querySelector('input[type="email"]');
+var modal = document.querySelector('dialog');
+var modalOK = document.querySelector('dialog button');
+var modalText = document.querySelector('dialog p');
 
-let fmeddelande  = document.querySelector('textarea');
-
-fknapp.addEventListener("click", function (e){
+// Lyssna på "click"-event (händelse)
+fknapp.addEventListener("click", function (e) {
+    // Hindra att sidand laddas om
     e.preventDefault();
-    let ftext = fnamn.value + "din mejladress är " + fmail.value + "och ditt meddelande är "+ fmeddelande.value;
 
-    fmeddelande.value = "Tack för Meddelandet! ";
+    // Läs av det som står i textrutorna och lägg i en variabel
+    let ftext = fnamn.value + "\n" + femail.value + "\n" + fmeddelande.value;
 
-    console.log(ftext);
-
+    // Skriv ut bekräftelse
+    modalText.innerHTML = "Tack för meddelande!\nDu skrev:\n" + ftext;
+    modal.showModal();
+});
+modalOK.addEventListener('click', function () {
+    modal.close();
 })
