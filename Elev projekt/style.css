@@ -1,21 +1,19 @@
 body {
-    background: #f0f0f0;
     font-family: Arial, sans-serif;
 }
 .kontainer {
-    width: 700px;
+    width: 1000px;
     margin: 2em auto;
     padding: 2em;
-    background: #fff;
+    background: #1f1f2b;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-.kol-4 {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 10px;
+.grid {
+    height: 2;
 }
+
 label {
     display: grid;
         grid-template-columns: 1fr 2fr;
@@ -46,5 +44,23 @@ input {
     width: 3em;
 }
 img {
-    width: 10em;
+    width: 16em;
+}
+.total {
+    background-color: #DDD;
+    padding: 5px;
+}
+form.grid{
+    grid-template-columns: 2fr 1fr;
+}
+
+.grid .submit{
+    margin-top: 170px;
+    width: 170px;
+}
+label {
+    width: 1790px;
+}
+label textarea{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
