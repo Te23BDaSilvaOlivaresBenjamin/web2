@@ -1,26 +1,63 @@
-var rutainput = document.querySelector('input');
-var knappen = document.querySelector('button');
-var listan = document.querySelector('.namnlista');
+var neyknapp = document.querySelector('.Neymarknapp');
+var ronknapp = document.querySelector('.Ronaldinhomodal');
+var peleknapp = document.querySelector('.Pelemodal');
+var neymodal = document.querySelector('.neyney');
+var stäng = document.querySelector('.stop');
 
-knappen.addEventListener('click', function () {
-    rutainput.value = d
-    knappen.value
+neyknapp.addEventListener('click', function () {
+    console.log('hey');
+
+    neymodal.querySelector('article').innerHTML = `
+            <h2>Neymar</h2>
+            <p>
+                Thank you for signing up for a membership!
+                Please review the membership details below:
+            </p>
+            <ul>    
+                <li>Membership: Individual</li>
+                <li>Price: $10</li>
+            </ul>
+    `;
+
+    neymodal.showModal();
 })
 
-Minusknapp.addEventListener ('click', function  (){
-    if (rutaAntal.value > 0){
-        rutaAntal.value -= 1;
-        rutaSumma.textContent = (rutaAntal.value * rutaPris.textContent);
-    }
+ronknapp.addEventListener('click', function () {
+    console.log('hey');
+    neymodal.querySelector('article').innerHTML = `
+
+            <h2>Ronaldinho</h2>
+            <p>
+                Thank you for signing up for a membership!
+                Please review the membership details below:
+            </p>
+            <ul>
+                <li>Membership: Individual</li>
+                <li>Price: $10</li>
+            </ul>
+    `;
+    
+    neymodal.showModal();
 })
 
-var rutaPrisalla = document.querySelectorAll('.pris');
-var totalen = 0
+peleknapp.addEventListener('click', function () {
+    console.log('hey');
+    neymodal.querySelector('article').innerHTML = `
 
-rutaPrisalla.forEach(function (prisruta)    {
-
-    totalen += Number(prisruta.textContent);
-
-    console.log(prisruta.textContent, totalen);
+            <h2>Pele</h2>
+            <p>
+                Thank you for signing up for a membership!
+                Please review the membership details below:
+            </p>
+            <ul>
+                <li>Membership: Individual</li>
+                <li>Price: $10</li>
+            </ul>
+    `;
+    
+    neymodal.showModal();
 })
-rutaTotal.textContent = totalen;
+
+stäng.addEventListener('click', function () {
+    neymodal.close();
+})
